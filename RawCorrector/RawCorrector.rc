@@ -1,0 +1,227 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN_DIALOG DIALOGEX 0, 0, 437, 367
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Raw補正シミュレータ"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,366,342,64,18
+    GROUPBOX        "処理設定",IDC_STATIC,7,92,423,181
+    CONTROL         "",IDC_PROC_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,37,179,176,67
+    CONTROL         "",IDC_PRM_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,233,117,186,116
+    PUSHBUTTON      "実行",IDC_BUTTON_EXEC,288,343,65,17
+    LTEXT           "< 処理経路設定 >",IDC_STATIC,17,106,64,8
+    LTEXT           "< パラメータ編集 >",IDC_STATIC,234,106,61,8
+    LTEXT           "⇒",IDC_STATIC,220,196,9,8
+    COMBOBOX        IDC_COMBO_PROC_SELECT,19,117,193,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "処理群",IDC_STATIC,18,134,195,41
+    PUSHBUTTON      "位相差RAW",IDC_BUTTON_PHASEDIFF,23,143,62,14
+    PUSHBUTTON      "ゲイン補正",IDC_BUTTON_GAIN,85,143,62,14
+    PUSHBUTTON      "FHD MonitorRAW",IDC_BUTTON_FHDMONITOR,147,143,62,14
+    PUSHBUTTON      "画素補正",IDC_BUTTON_PIXELCORRECT,23,157,62,14
+    PUSHBUTTON      "光軸補正",IDC_BUTTON_OPTICAXIS,85,157,62,14
+    PUSHBUTTON      "現像",IDC_BUTTON_DEVELOP,147,157,62,14
+    EDITTEXT        IDC_EDIT_PRM,233,234,186,31,ES_MULTILINE | ES_AUTOVSCROLL,WS_EX_LEFTSCROLLBAR
+    PUSHBUTTON      "一つ削除",IDC_BUTTON_CLEAR,18,250,62,14
+    PUSHBUTTON      "全て削除",IDC_BUTTON_ALLCLEAR,85,250,62,14
+    PUSHBUTTON      "処理経路登録",IDC_BUTTON_PROCREGISTR,152,250,62,14
+    CONTROL         "",IDC_FILE_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,423,78,WS_EX_ACCEPTFILES
+    LTEXT           "< 入力データ情報確認 >  －",IDC_STATIC,16,280,94,8
+    LTEXT           "先頭色：",IDC_STATIC,21,292,29,8
+    LTEXT           "-",IDC_STATIC_STARTCOLOR,51,292,10,8
+    LTEXT           "詰め方向：",IDC_STATIC,168,293,36,8
+    LTEXT           "エンディアン：",IDC_STATIC,236,292,40,8
+    LTEXT           "bit数：",IDC_STATIC,309,292,21,8
+    LTEXT           "ヘッダサイズ：",IDC_STATIC,350,292,42,8
+    PUSHBUTTON      "変更",IDC_BUTTON_INPUTDATA_EDIT,112,277,23,12
+    LTEXT           "Width：",IDC_STATIC,66,292,24,8
+    LTEXT           "Height：",IDC_STATIC,116,292,26,8
+    LTEXT           "< Eva設定確認 >            －",IDC_STATIC,17,309,92,8
+    PUSHBUTTON      "変更",IDC_BUTTON_EVAPATH_EDIT,112,305,23,12
+    LTEXT           "exeパス        ：",IDC_STATIC,22,319,46,8
+    LTEXT           "パラメータパス：",IDC_STATIC,21,328,47,8
+    LTEXT           "-",IDC_STATIC_DATASTUFF,204,293,21,8
+    LTEXT           "-",IDC_STATIC_ENDIAN,277,292,19,8
+    LTEXT           "-",IDC_STATIC_BITNUM,329,292,15,8
+    LTEXT           "-",IDC_STATIC_HEADERSIZE,391,292,33,8
+    LTEXT           "-",IDC_STATIC_WIDTH,90,292,24,8
+    LTEXT           "-",IDC_STATIC_HEIGHT,141,292,24,8
+    LTEXT           "C:/TOOL/Eva9/x64/Eva9.exe",IDC_STATIC_EVAEXEPATH,69,319,353,8
+    LTEXT           "C:/PROJECTS/Data/paramdt/S0036_10_sRGB_NATURAL_v01_OB値入力済み.dc9",IDC_STATIC_EVAPRMPATH,69,328,353,8
+    PUSHBUTTON      "↑",IDC_BUTTON_PROCTURNCHANGE_UP,17,179,17,33
+    PUSHBUTTON      "↓",IDC_BUTTON_PROCTURNCHANGE_DOWN,17,213,17,33
+    PUSHBUTTON      "Upload",IDC_BUTTON_PRM_WRITE,302,104,117,12
+END
+
+IDD_INPUTDATA_DIALOG DIALOGEX 0, 0, 314, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "入力データ情報設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "先頭色",-1,8,7,36,55
+    CONTROL         "R",IDC_RADIO_R,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,17,22,10
+    CONTROL         "Gr",IDC_RADIO_GR,"Button",BS_AUTORADIOBUTTON,16,28,23,10
+    CONTROL         "Gb",IDC_RADIO_GB,"Button",BS_AUTORADIOBUTTON,16,39,23,10
+    CONTROL         "B",IDC_RADIO_B,"Button",BS_AUTORADIOBUTTON,16,50,23,10
+    GROUPBOX        "データ詰め方向",-1,51,7,87,24
+    CONTROL         "上詰め",IDC_RADIO_UP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,59,17,38,10
+    CONTROL         "下詰め",IDC_RADIO_DOWN,"Button",BS_AUTORADIOBUTTON,98,17,38,10
+    GROUPBOX        "エンディアン",-1,51,35,87,26
+    CONTROL         "Big",IDC_RADIO_BIG,"Button",BS_AUTORADIOBUTTON | WS_GROUP,60,46,24,10
+    CONTROL         "Little",IDC_RADIO_LITTLE,"Button",BS_AUTORADIOBUTTON,98,46,27,10
+    LTEXT           "Width   ：",-1,149,11,30,8
+    LTEXT           "Height   ：",-1,227,11,32,8
+    EDITTEXT        IDC_EDIT_WIDTH,177,9,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,257,9,40,14,ES_AUTOHSCROLL
+    LTEXT           "bit       ：",-1,151,29,27,8
+    EDITTEXT        IDC_EDIT_BIT,177,27,23,14,ES_AUTOHSCROLL
+    LTEXT           "Header：",-1,150,47,28,8
+    EDITTEXT        IDC_EDIT_HEADER,177,45,58,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,190,68,50,14
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,257,68,50,14
+END
+
+IDD_EVASET_DIALOG DIALOGEX 0, 0, 431, 101
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Eva設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDOK,306,80,50,14
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,374,80,50,14
+    EDITTEXT        IDC_EDIT_EVAEXEPATH,16,28,383,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BUTTON_REF_EVAPATH,402,27,17,14
+    EDITTEXT        IDC_EDIT_EVAPRMPATH,16,56,383,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BUTTON_REF_PRMPATH,402,56,17,14
+    LTEXT           "< Eva実行ファイルパス >",IDC_STATIC,17,19,79,8
+    LTEXT           "< Evaパラメータファイルパス >",IDC_STATIC,16,47,92,8
+    LTEXT           "※目的のエディットボックスへ実行ファイルまたはパラメータファイルをドラッグ＆ドロップしてください",IDC_STATIC,70,5,290,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 430
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 360
+    END
+
+    IDD_INPUTDATA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_EVASET_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)",                      ID_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "アプリケーションの終了(&X)",             ID_CLOSE
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "削除(&D)",                      ID_CLEAR
+        MENUITEM "全て削除(&A)",                    ID_ALLDELETE
+    END
+    POPUP "設定(&S)"
+    BEGIN
+        MENUITEM "オプション(&O)",                   ID_40006
+    END
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
